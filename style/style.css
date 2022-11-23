@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(244, 238, 233);
+}
+/****************** NAVBAR styling *******************/
+.navbar-collapse {
+    /* justify-content: flex-end; */
+    font-size: 24px;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: black;
+}
+.nav-link:hover {
+    color: black;
+}
+
+.navbar {
+    margin: 0px;
+    background: rgb(85, 176, 105);
+    margin: 0px;  
+    padding: 10px;
+}
+/****************** NAVBAR styling *******************/
+
+/****************** index body styling *******************/
+.main {
+    background: rgb(246, 234, 224);
+    padding: 10px;
+}
+
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+    width: 50%;
+}
+/****************** index body styling *******************/
+
+
