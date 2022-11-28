@@ -29,7 +29,7 @@ body {
     margin: 0px;  
     padding: 10px;
 }
-/****************** NAVBAR styling *******************/
+/****************** NAVBAR end styling *******************/
 
 /****************** index body styling *******************/
 .main {
@@ -43,6 +43,48 @@ body {
     margin-right: auto;    
     width: 50%;
 }
-/****************** index body styling *******************/
+/****************** index body end styling *******************/
 
 
+/****************** Random Forests body styling *******************/
+
+.rfc {
+    text-align: center;
+}
+
+/****************** Random Forests body end styling *******************/
+
+
+/****************** Logistic Regression body styling *******************/
+
+.lr {
+    text-align: center;
+}
+
+/****************** Logistic Regression body end styling *******************/
+
+
+/****************** SVW body styling *******************/
+.svw {
+    text-align: center;
+}
+/****************** SVW body end styling *******************/
+
+
+/****************** Analysis body styling *******************/
+.analysis{
+    text-align: center;
+}
+/****************** Analysis body end styling *******************/
+
+
+/****************** Data body styling *******************/
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    padding: 10px 0;
+    text-align: center;
+}
+/****************** Data body end styling *******************/
