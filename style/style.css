@@ -107,7 +107,7 @@ html {
   }
   
   .card {
-    height: max-content;;
+    height: 60%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
     padding: 16px;
@@ -119,16 +119,16 @@ html {
     display: block;
     margin-left: auto;
     margin-right: auto;    
-    width: 60%;
-    height: 60%;
+    width: 100%;
+    height: 90%;
+    
     }
   .about-section {
     padding: 50px;
     text-align: center;
-    background-color: rgb(244, 238, 233;
-    color: rgb(195, 229, 188);
+    background-color: rgb(244, 238, 233);
+    color: black;
   }
-  
   
   
   @media screen and (max-width: 650px) {
@@ -137,5 +137,5 @@ html {
       display: block;
     }
   }
-}
+
 /****************** Team body end styling *******************/
