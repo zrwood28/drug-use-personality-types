@@ -43,6 +43,10 @@ body {
     margin-right: auto;    
     width: 50%;
 }
+
+.center {
+    text-align: center;
+}
 /****************** index body end styling *******************/
 
 
