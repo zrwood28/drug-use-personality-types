@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>SVW</title>
+    <title>Support Vector Machine</title>
     <!-- Bring in the Bootstrap stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- My CSS -->
@@ -26,7 +26,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="randomforests.html">Random Forests</a></li>
               <li><a class="dropdown-item" href="logisticregression.html">Logistic Regression</a> </li>                 
-              <li><a class="dropdown-item" href="svw.html">SVW</a></li>
+              <li><a class="dropdown-item" href="svw.html">Support Vector Machine</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -44,9 +44,25 @@
     <div class="container">
         <div class="row">
           <div class="col-md-12 main">
-            <h1 class="svw">SVW</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus magni quos at facere. Quas natus porro delectus molestiae fugit quam quia ea ullam optio? Nihil sapiente quisquam explicabo repudiandae quo!</p>
-  
+            <h1 class="svw">Support Vector Machine</h1>
+            <h2>Introduction</h2>
+            <p id="svm_text">Support Vector Machines (SVM) are a commonly used supervised learning model. First developed in the 1990’s at Bell Laboratories, SVMs can be used for either classification or regression analysis. SVMs work by maximizing the distance between two categories. When provided with new data, the model determines which cluster the new data is closest to and then outputs the identity of that cluster as the result.</p>
+            <center>
+              <img src="images/svm_figure.png" width="1000"></img>
+            </center>
+            <h2>Results</h2>
+            <h3>All Features Model</h3>
+            <p id="svm_text">To train a SVM model on the drug use dataset, all categorial features were first transformed using the panadas get dummies function. Next, the data was split into training and testing sets. A standard scaler was trained using the training data set and used to scale the test and training datasets. Finally, a SVM model was trained using the sklearn.svm.SVC. The model had 80.8% accuracy when evaluated using the test dataset.</p>
+            <center>
+            <img src="images/svm_results.png" width="800" ></img>
+            </center>
+            <br>
+            <h3>Personality Only Model</h3>
+            <p id="svm_text">A second SMV model was created using only the personality score features. The same procedure was followed for pretreating the data and creating the model (pandas get dummies, standard scaler, sklearn.svm.SVC). The personality only model had an accuracy of 77.6% when evaluated using the test dataset.</p>
+            <center>
+            <img src="images/svm_results_personality_only.png" width="800" ></img>
+            </center>
+
           </div>
         </div>
       </div>
