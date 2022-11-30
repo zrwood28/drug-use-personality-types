@@ -45,8 +45,38 @@
         <div class="row">
           <div class="col-md-12 main">
             <h1 class="lr">Logistic Regression</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus magni quos at facere. Quas natus porro delectus molestiae fugit quam quia ea ullam optio? Nihil sapiente quisquam explicabo repudiandae quo!</p>
-  
+            <br>
+            <h4>Introduction</h4>
+            <p>Logistic regression models are common in machine learning settings and are generally strong choices when dealing with binary target variables. In other words, 
+              if one wants to predict a yes/no, true/false, success/fail type outcomes, a logistic regression model might be an ideal place to start. This model can use few to 
+              many features to predict the target outcome. Additionally, feature variables can be either categorical or continuous in nature. Logistic regressions can also 
+              run relatively quickly and efficiently.
+            </p>
+
+            <p>A few examples of common use cases for the logistic regression model:
+                <ul>
+                    <li>Predicting the presence of a specific disease or disorder based on a patient’s symptoms</li>
+                    <li>Determining whether an individual is a risk to default on a credit card based on their financial profile</li>
+                    <li>Estimating a voter’s likely candidate preference in a political election</li>
+                </ul>
+            </p>
+            <br>
+            <h4>Our Application</h4>
+            <p>Our models were generated using the scikit-learn package for Python. The preprocessed version of our data was imported and categorical columns were encoded in order to simplify our dataset, mainly for the utilization of other model types. 
+              <br>
+              For our first iteration of the logistic regression model, we tested our data as it was without making any tweaks. This produced a favorable result as a preliminary model:
+              <br>
+              Training Data Score: 0.8045
+              Testing Data Score: 0.8166
+              <br>
+              Based on our feature analysis, we decided to drop the ethnicity columns as they held little weight in predicting whether an individual in the sample had partaken in illegal drugs or not. Over 90% of our sample was White, so other ethnic groups were undersampled. When we dropped every ethnicity column and ran the model again on the new dataset, it performed as such:
+              <br>
+              Training Data Score: 0.8053
+              Testing Data Score: 0.8188     
+              <br>
+              There was minimal improvement with this change. It still performed similarly to the original dataset.
+              </p>
+
           </div>
         </div>
       </div>
