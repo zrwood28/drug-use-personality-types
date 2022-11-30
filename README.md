@@ -18,6 +18,7 @@ Neural Network | xxx
 
 </div>
 ____________
+
 ## Technologies and Tools Used:
 
 - Jupyter Notebook/Pandas
