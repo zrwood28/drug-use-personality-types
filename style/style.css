@@ -56,6 +56,10 @@ body {
     text-align: center;
 }
 
+#rf_text{
+    font-size: 24px;
+}
+
 /****************** Random Forests body end styling *******************/
 
 
@@ -63,6 +67,10 @@ body {
 
 .lr {
     text-align: center;
+}
+
+#log_text{
+    font-size: 24px;
 }
 
 /****************** Logistic Regression body end styling *******************/
