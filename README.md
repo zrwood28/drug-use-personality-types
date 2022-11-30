@@ -5,25 +5,19 @@
 Project Team Members: Ben Johnson, Joey Eikens, Yameena Khan, and Zach Wood
 ____________
 ## Project Overview 
-Is it possible to predict illegal drug using personality test results and basic demographic information? To answer this question, we built four different ML models capable of predicting if someone has used illegal drugs in the past year. An overview of the results of each model is shown below. For a more detailed analysis, visit our site at: githublink
+Is it possible to predict illegal drug using personality test results and basic demographic information? To answer this question, we built four different ML models capable of predicting if someone has used illegal drugs in the past year. An overview of the results of each model is shown below. For a more detailed analysis, visit our site at: https://zrwood28.github.io/drug-use-personality-types/.
 
 <div align='center'>
 
 Model | Test Accuracy
 --- | ---
-Random Forests |xxx
-Logistic Regression | xxx
+Random Forests |83.4%
+Logistic Regression | 81.9%
 Suport Vector Machine | 80.8%
 Neural Network | xxx
 
 </div>
 
-<!-- <p align="center">
-  <img src="Images/tsne.png" />
-</p> -->
-
-
-____________
 ## Technologies and Tools Used:
 
 - Jupyter Notebook/Pandas
