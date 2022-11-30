@@ -45,17 +45,48 @@
 
     <!-- BODY ------------------------------------------------------------>
     <div class="container">
-        <div class="row">
-          <div class="col-md-12 main">
-            <h1 class="analysis">Analysis</h1>
-            <p id="analysis_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus magni quos at facere. Quas natus porro delectus molestiae fugit quam quia ea ullam optio? Nihil sapiente quisquam explicabo repudiandae quo!</p>
-            
-            <h2>ETL</h2>
-            <p id="analysis_text">The dataset used in this project contains records for 1885 respondents. Each respondent completed three personality tests: NEO-FFI-R, BIS-11, and ImpSS and provided their level of education, age, gender, country of residence and ethnicity. In addition, participants completed a questionnaire where they provided the time of their last use for 18 legal and illegal drugs (alcohol, amphetamines, amyl nitrite, benzodiazepine, cannabis, chocolate, cocaine, caffeine, crack, ecstasy, heroin, ketamine, legal highs, LSD, methadone, mushrooms, nicotine and volatile substance abuse). The target column, used to train the machine learning models, was created by assigning a 1 to any participant that had used any illegal (amphetamines, amyl nitrite, benzodiazepine, cocaine, ecstasy, heroin, ketamine, LSD, methamphetamine, mushrooms, and volatile substance abuse) drug in the past year.</p>           
-            
-          </div>
+      <div class="row">
+        <div class="col-md-12 main">
+          <h1 class="analysis">Analysis</h1>
+          <h2>ETL</h2>
+          <p id="analysis_text">The dataset used in this project contains records for 1885 respondents. Each respondent completed 
+            three personality tests: NEO-FFI-R, BIS-11, and ImpSS and provided their level of education, age, gender, country 
+            of residence and ethnicity. In addition, participants completed a questionnaire where they provided the time of their 
+            last use for 19 legal and illegal drugs (alcohol, amphetamines, amyl nitrite, benzodiazepine, caffeine, cannabis, chocolate, cocaine, 
+            caffeine, crack, ecstasy, heroin, ketamine, legal highs, LSD, methadone, mushrooms, nicotine and volatile substance abuse).</p>
+            <br>
+            <p id="analysis_text">The participants indicated whether or not the drug had been used and how recent the drug was used
+            on a scale from CL0 to CL6 with CL0 being never used, and CL6 being used in the last day. To further simplify the dataset and allow for a binary target column, a couple of steps were taken to simplify the dataset.
+            A target column was used to train the machine learning models by assigning a 1 to any participant that had used any illegal drugs    
+            (amphetamines, amyl nitrite, benzodiazepine, cocaine, ecstasy, heroin, ketamine, LSD, methamphetamine, mushrooms, and volatile substance abuse) in the past year. 
+            Any legal drug use was ignored by this column, and CL0 - CL2 were lumped togehter as they indicated no drug use or drug use beyone one year ago, so these indicators were also ignored.
+            Subsequently, classes CL3, CL4, CL5, and CL6 were lumped together for each illegal drug indicate that the drug had been used in the last year, so if a participant indicated a CL3-CL6 for any of the above listed illegal drugs,
+            their result in the target column would be assigned a 1, and all others assigned a 0.
+            </p>
+          <br>
+          <h2>Model Comparison</h2>
+          <p id="analysis_text">
+            Once the dataset was cleaned up with a defined target column, some further modification to the dataset was completed before fitting any of the models. Since a few of the columns were categorical (Age, Ethnicty, Country, and Education),
+            encoding was completed to provide a unique column for each unique response to the respective categorical columns. The categorical columns had the following responses within the dataset:</p>
+            <ul>
+              <li>Age - 18-24, 25-34, 35-44, 45-54, 55-64, and 65+ - resulting in 6 new encoded columns</li>
+              <li>Ethnicity - White, Black, Asian, Mixed-White/Black, Mixed-White/Asian, Mixed-Black/Asian, and Other - resulting in 7 new encoded columns</li>
+              <li>Country - UK, USA, Canada, Australia, Republic of Ireland, New Zealand, and Other - resulting in 7 new encoded columns</li>
+              <li>Education - Some College (no degree), University Degree, Masters Degree, Professional Certificate, Left School at 18 Years, Left School at 17 Years, Left School at 16 Years, Left School before 16 years, and Doctorate Degree - resulting in 9 new encoded columns</li>
+            </ul>
+            <p id="analysis_text">Between the three supervised learning models (Random Forests, Logistic Regression, Support Vector Machine), the resulting scores were all generally similar with a testing score around 80% give or take a couple of percent depending on the attributes used.
+            Refer to the specific model pages for further detail, but when comparing the results of the models that used all of the attributes, the following scores were oberved:
+          </p>
+          <br>
+          <p id="analysis_text">Random Forests Test Score: 83.4%</p>
+          <p id="analysis_text">Logistic Regression Test Score: 81.6%</p>
+          <p id="analysis_text">Support Vector Machine Test Score: 80.8%</p>
         </div>
       </div>
+    </div>
+
+
+
 
     <!-- BODY ------------------------------------------------------------>
 
