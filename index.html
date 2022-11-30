@@ -44,11 +44,95 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 main">
+          <h1 class="center">Personality Traits and Drug Use</h1>
           <img class="img1" src="images/personality.jpeg" alt="personality">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus magni quos at facere. Quas natus porro delectus molestiae fugit quam quia ea ullam optio? Nihil sapiente quisquam explicabo repudiandae quo!</p>
-
+          <br>
+          <h3 class="center">Project Introduction</h3>
+          <p>The purpose of this research project was to perform supervised machine learning on a dataset from the UCI Machine Learning Repository to see if we can accurately determine whether a person used illegal drugs based on their personality traits and demographics.
+            The dataset consists of 32 columns and about 1800 rows of data. The particpants provided typical demographic information as part of the dataset,
+             and each participant has a score for 7 separate personality characteristics. In addition, the participants indicated whether or not they have taken 19 different drugs.
+            They indicated whether a drug has been taken baed on the following criteria:
+          <ul>
+            <li>CL0 - Never Used</li>
+            <li>CL1 - Used Over a Decage Ago</li>
+            <li>CL2 - Used in Last Decade</li>
+            <li>CL3 - Used in Last Year</li>
+            <li>CL4 - Used in Last Month</li>
+            <li>CL5 - Used in Last Week</li>
+            <li>CL6 - Used in Last Day</li>
+          </ul></p>
+          <p>The dataset was simplified to allow for better results when performing supervised machine learning models. More information on this topic can be found in the ETL section of the Analysis page.</p>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-12 main">
+          <h3 class="center">Personality Characteristics</h3>
+          <p>The dataset has 7 personality measurements including Nscore, Escore, Oscore, Ascore, Cscore, Impulsive and SS.</p>
+          <h5>Nscore = Neuroticism</h5>
+          <h5>Escore = Extroversion</h5>
+          <h5>Oscore = Openness to Experience</h5>    
+          <h5>Ascore = Agreeableness</h5>    
+          <h5>Cscore = Conscientiousness</h5>
+          <h5>Impulsive = Impulsiveness</h5>  
+          <h5>SS = Sensation Seeking</h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 main">
+          <h3 class="center">Participant Demographics</h3>
+          <p>The 1800 or so participants provided their Age, Country, Ethnicity, and Education level as seen in the below charts.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 main">
+          <div class='tableauPlaceholder' id='viz1669685265818' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dr&#47;drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByAge&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByAge' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dr&#47;drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByAge&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1669685265818');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+        <div class="col-md-6 main">
+          <div class='tableauPlaceholder' id='viz1669685275822' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dr&#47;drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByCountry&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByCountry' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dr&#47;drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByCountry&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1669685275822');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 main">
+          <div class='tableauPlaceholder' id='viz1669685289351' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dr&#47;drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByEducation&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByEducation' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dr&#47;drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByEducation&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1669685289351');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+        <div class="col-md-6 main">
+          <div class='tableauPlaceholder' id='viz1669685302883' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dr&#47;drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByEthnicity&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByEthnicity' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;dr&#47;drug-use-summary&#47;UsedIllegalDrugsinLastYear-ByEthnicity&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1669685302883');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+        <br>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 main">
+          <h3 class="center">Drugs</h3>
+          <p>Each participant indicated usage of the following drugs as part of the study:</p>
+          <ol>
+            <li>Alcohol</li>
+            <li>Amphetamines</li>
+            <li>Amyl Nitrite</li>
+            <li>Benzodiazepine</li>
+            <li>Caffeine</li>
+            <li>Cannabis</li>
+            <li>Chocolate</li>
+            <li>Cocaine</li>
+            <li>Crack</li>
+            <li>Ecstasy</li>
+            <li>Heroin</li>
+            <li>Ketamine</li>
+            <li>Legal Highs</li>
+            <li>LSD</li>
+            <li>Methadone</li>
+            <li>Mushrooms</li>
+            <li>Nicotine</li>
+            <li>Semeron</li>
+            <li>Volatile Substance Abuse</li>
+          </ol>
+          <p>Refer to the Analysis page for further information regarding the delineation between legal and illegal drugs and whether or not the participant is considered to have used the drug.</p>
+        </div>
+      </div>
+
     </div>
 
     <!-- BODY ------------------------------------------------------------>
