@@ -17,7 +17,6 @@ Suport Vector Machine | 80.8%
 Neural Network | xxx
 
 </div>
-____________
 
 ## Technologies and Tools Used:
 
