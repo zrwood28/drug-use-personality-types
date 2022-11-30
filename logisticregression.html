@@ -48,29 +48,44 @@
         <div class="row">
           <div class="col-md-12 main">
             <h1 class="lr">Logistic Regression</h1>
-            <br>
-            <h4>Introduction</h4>
-            <p>Logistic regression models are common in machine learning settings and are generally strong choices when dealing with binary target variables. In other words, 
+            <h2>Introduction</h2>
+            <p id = "log_text">Logistic regression models are common in machine learning settings and are generally strong choices when dealing with binary target variables. In other words, 
               if one wants to predict a yes/no, true/false, success/fail type outcomes, a logistic regression model might be an ideal place to start. This model can use few to 
               many features to predict the target outcome. Additionally, feature variables can be either categorical or continuous in nature. Logistic regressions can also 
               run relatively quickly and efficiently.
             </p>
-
-            <p>A few examples of common use cases for the logistic regression model:
-                <ul>
+            <br>
+            <center>
+              <img src = "images/log_reg_sample.png" height="400"></img>
+              <br>
+              <a href = "https://codesachin.wordpress.com/2015/08/16/logistic-regression-for-dummies/">Image Source</a>
+            </center>
+            <br>
+            <p id = "log_text">A few examples of common use cases for the logistic regression model:
+                <ul id = "log_text">
                     <li>Predicting the presence of a specific disease or disorder based on a patient’s symptoms</li>
                     <li>Determining whether an individual is a risk to default on a credit card based on their financial profile</li>
                     <li>Estimating a voter’s likely candidate preference in a political election</li>
                 </ul>
             </p>
             <br>
-            <h4>Our Application</h4>
-            <p>Our models were generated using the scikit-learn package for Python. The preprocessed version of our data was imported and categorical columns were encoded in order to simplify our dataset, mainly for the utilization of other model types. 
+            <center>
+              <img src = "images/log_reg_flowchart.png" height="300"></img>
               <br>
-              For our first iteration of the logistic regression model, we tested our data as it was without making any tweaks. This produced a favorable result as a preliminary model:
+              <a href = "https://blog.devgenius.io/develop-a-logistic-regression-machine-learning-model-64d2be403ba3">Image Source</a>
+            </center>
+            <br>
+            <h2>Results</h2>
+            <p id = "log_text">Our models were generated using the scikit-learn package for Python. The preprocessed version of our data was imported and categorical columns were encoded in order to simplify our dataset, mainly for the utilization of other model types.
+            <h3>All Features Model</h3>
+            <p id = "log_text">For our first iteration of the logistic regression model, we tested our data as it was without making any tweaks and including all feature variables. This produced a favorable result as a preliminary model, producing over 80% accuracy on both the training and testing data:</p>
               <br>
-              Training Data Score: 0.8045
-              Testing Data Score: 0.8166
+            <center>
+              <img src = "images/log_all_test.png" height="75"></img>
+              <br>
+              <br>
+              <img src = "images/log_all_cm.png"></img>
+            </center>
               <br>
               Based on our feature analysis, we decided to drop the ethnicity columns as they held little weight in predicting whether an individual in the sample had partaken in illegal drugs or not. Over 90% of our sample was White, so other ethnic groups were undersampled. When we dropped every ethnicity column and ran the model again on the new dataset, it performed as such:
               <br>
