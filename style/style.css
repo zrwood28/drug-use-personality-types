@@ -166,3 +166,10 @@ html {
   }
 
 /****************** Team body end styling *******************/
+
+/****************** Analysis body styling *******************/
+.plot {display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;}
+/****************** Analysis body end styling *******************/
