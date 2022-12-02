@@ -76,9 +76,10 @@
             <b><i>Building and Training the Optimal Model:</i></b> Using the best hyperparameters obtained we created a neural network model. Trained it on our training dataset and then evaluated the model against the test data set.
             
             <h2>Results</h2>
-            <p id="nn_text">The best model that KerasTuner picked for the training and test data set was a sequentail model with three hidden layers with nine nodes in the first two hidden layers and seven nodes in the third with the activation function as 'tanh'.
-                When we fit and trained the data on this optimal model using 50 epochs. The accuracy achieved when the model was evaluated against the test data was 0.827 and the model loss recorded was 0.447. 
-            </p>
+            <p id="nn_text">The best model that KerasTuner picked for the training and test data set was a sequentail model with four hidden layers with three nodes in the first and third hidden layers and nine nodes in the second and fourth hidden layers with the activation function as 'sigmoid'.
+              When we fit and trained the data on this optimal model using 50 epochs and plotted the results. 
+              The accuracy achieved when the model was evaluated against the test data was 0.838 and the model loss recorded was 0.649. 
+          </p>
 
             <center>
                 <img src="images/accuracy_plot.png" class="plot" alt="accuracy" style="width: 50%"></img>
@@ -90,9 +91,9 @@
                 <p><i>Figure 2: Loss recorded on the optimized model</i></p>
             </center> 
             <br>
-            <p id="nn_text">The graphs above were plotted to have an idea of the accuracy and loss achieved over each epoch to determine if the optimal model as suggested by KerasTuner was under or over fit. 
-                As per the graphs suggest we can see the model was trained well, with the highest accuracy reaching about 0.95 and loss being minimized to 0.1. We can call it being over fit, however when we evaluated the model using the test data the accuracies achieved were round about 0.82 which indeed alligns with the other machine learning classifiers we have used.
-            </p>
+            <<p id="nn_text">The graphs above were plotted to have an idea of the accuracy and loss achieved over each epoch to determine if the optimal model as suggested by KerasTuner was under or over fit. 
+              As per the graphs suggest we can see the model was trained well, and the test data results were inline with how the model was trained.
+          </p>
           </div>
         </div>
       </div>
