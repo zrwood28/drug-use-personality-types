@@ -14,7 +14,7 @@ Model | Test Accuracy
 Random Forests |83.4%
 Logistic Regression | 81.9%
 Suport Vector Machine | 80.8%
-Neural Network | xxx
+Neural Network | 82.7%
 
 </div>
 
@@ -29,10 +29,10 @@ _____________
 
 ### ML Models and ETL
 - ETL.ipynb
-- pca_tests.ipynb (Logistic Regression and Random Forest with PCA feature reduction)
-- personality_drugs_supervised-learning.ipynb (Random Forest and Logistic Regression)
-- Preprocessing_Data.ipynb (KNN and Neural Network)
-- model_JPE.ipynb (Support Vector Machine)
+- logisticregression.ipynb
+- neuralnetwork.ipynb
+- randomforest.ipynb
+- supportvector.ipynb
 
 ### Website
 - index.html
