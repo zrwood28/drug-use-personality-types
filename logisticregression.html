@@ -49,7 +49,7 @@
           <div class="col-md-12 main">
             <h1 class="lr">Logistic Regression</h1>
             <h2>Introduction</h2>
-            <p id = "log_text">Logistic regression models are common in machine learning settings and are generally strong choices when dealing with binary target variables. In other words, 
+            <p>Logistic regression models are common in machine learning settings and are generally strong choices when dealing with binary target variables. In other words, 
               if one wants to predict a yes/no, true/false, success/fail type outcomes, a logistic regression model might be an ideal place to start. This model can use few to 
               many features to predict the target outcome. Additionally, feature variables can be either categorical or continuous in nature. Logistic regressions can also 
               run relatively quickly and efficiently.
@@ -61,8 +61,8 @@
               <a href = "https://codesachin.wordpress.com/2015/08/16/logistic-regression-for-dummies/">Image Source</a>
             </center>
             <br>
-            <p id = "log_text">A few examples of common use cases for the logistic regression model:
-                <ul id = "log_text">
+            <p>A few examples of common use cases for the logistic regression model:
+                <ul>
                     <li>Predicting the presence of a specific disease or disorder based on a patient’s symptoms</li>
                     <li>Determining whether an individual is a risk to default on a credit card based on their financial profile</li>
                     <li>Estimating a voter’s likely candidate preference in a political election</li>
@@ -76,9 +76,9 @@
             </center>
             <br>
             <h2>Results</h2>
-            <p id = "log_text">Our models were generated using the scikit-learn package for Python. The preprocessed version of our data was imported and categorical columns were encoded in order to simplify our dataset, mainly for the utilization of other model types.
+            <p>Our models were generated using the scikit-learn package for Python. The preprocessed version of our data was imported and categorical columns were encoded in order to simplify our dataset, mainly for the utilization of other model types.</p>
             <h3>All Features Model</h3>
-            <p id = "log_text">For our first iteration of the logistic regression model, we tested our data as it was without making any tweaks and including all feature variables. This produced a favorable result as a preliminary model, producing over 80% accuracy on both the training and testing data:</p>
+            <p>For our first iteration of the logistic regression model, we tested our data as it was without making any tweaks and including all feature variables. This produced a favorable result as a preliminary model, producing over 80% accuracy on both the training and testing data:</p>
               <br>
             <center>
               <img src = "images/log_all_test.png" height="75"></img>
@@ -86,15 +86,26 @@
               <br>
               <img src = "images/log_all_cm.png"></img>
             </center>
+            <br>
+            <h3>Personality Features Only</h3>
+            <p>Since the personality characteristic variables were of notable interest for our group, we decided to test our logistic regression model out once again, but the personality variables were the only features of the tested data. All the demographic information was removed in order to get a more direct answer to whether these personality attributes serve as predictors to illegal drug use. Here are the results of this iteration:</p>
               <br>
-              Based on our feature analysis, we decided to drop the ethnicity columns as they held little weight in predicting whether an individual in the sample had partaken in illegal drugs or not. Over 90% of our sample was White, so other ethnic groups were undersampled. When we dropped every ethnicity column and ran the model again on the new dataset, it performed as such:
+            <center>
+              <img src = "images/log_pers_test.png" height = "75"></img>
               <br>
-              Training Data Score: 0.8053
-              Testing Data Score: 0.8188     
               <br>
-              There was minimal improvement with this change. It still performed similarly to the original dataset.
-              </p>
-
+              <img src = "images/log_pers_cm.png"></img>
+            </center>
+            <br>
+            <h3>PCA Feature Reduction</h3>
+            <p>Bringing all features back into the mix since the personality only version performed slightly poorer, we tried to reduce features using PCA. We set our feature reduction to account for 90% of our data’s variance and it reduced our 37 columns down to 13 new features. With these features, we ran our model once again to see if this would improve the scores:</p>
+              <br>
+            <center>
+              <img src = "images/log_pca_test.png" height = "75"></img>
+              <br>
+              <br>
+              <img src = "images/log_pca_cm.png"></img>
+            </center>
           </div>
         </div>
       </div>
