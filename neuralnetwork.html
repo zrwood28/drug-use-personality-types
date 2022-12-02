@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Neural Network</title>
+    <!-- Bring in the Bootstrap stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR ------------------------------------------------------------>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Models
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="randomforests.html">Random Forests</a></li>
+              <li><a class="dropdown-item" href="logisticregression.html">Logistic Regression</a> </li>                 
+              <li><a class="dropdown-item" href="svw.html">Support Vector Machine</a></li>
+              <li><a class="dropdown-item" href="neuralnetwork.html">Neural Network</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="analysis.html">Analysis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="data.html">Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="team.html">Team</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- NAVBAR ------------------------------------------------------------>
+
+    <!-- BODY ------------------------------------------------------------>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 main">
+            <h1 class="svw">Neural Networks and Keras-Tuner</h1>
+            <center>
+                <img src="images/nn1.jpeg" width="1000"></img>
+                <p>Source: https://towardsdatascience.com/a-soft-introduction-to-neural-networks-6986b5e3a127</p>
+              </center>
+            <h2>What are Neural Networks</h2>
+            <p id="nn_text">Artificial neural networks are a subset of machine learning and are at the heart of deep learning algorithms. 
+                Artificial neural networks (ANNs) are comprised of a node layers as shown in the diagram below, containing an input layer, one or more hidden layers, and an output layer. 
+                Each node, or artificial neuron, connects to another and has an associated weight and threshold. If the output of any individual node is above the specified threshold value, that node is activated, sending data to the next layer of the network. 
+                Otherwise, no data is passed along to the next layer of the network.</p>
+            <center>
+                    <img src="images/nn2.png" width="500"></img>
+                    <p>Source: https://towardsdatascience.com/applied-deep-learning-part-1-artificial-neural-networks-d7834f67a4f6</p>
+                </center>
+
+            <p id="nn_text">Neural networks models rely on training data to learn and improve their accuracy over time. 
+                However, once these learning algorithms are fine-tuned for accuracy, they are powerful tools in computer science and artificial intelligence, allowing us to classify and cluster data at a high velocity.
+            </p>
+            <h2>Keras-Tuner</h2>
+            <p id="nn_text">KerasTuner is an easy-to-use, scalable hyperparameter optimization framework that solves the pain points of hyperparameter search. Easily configure your search space with a define-by-run syntax, then leverage one of the available search algorithms to find the best hyperparameter values for your models. KerasTuner comes with Bayesian Optimization, Hyperband, and Random Search algorithms built-in, and is also designed to be easy for researchers to extend in order to experiment with new search algorithms.</p>
+            <h2>Finding an Optimal Neural Network Model using Keras-Tuner</h2>
+            <p id="nn_text"><b><i>Preprocessing Data:</i></b> First all the categorial data from the data set was transformed to numerical data using the pandas get dummies function. Then the data was split into training and testing set. Then using the standard scaler data training and testing datasets were scaled.
+            <br><br/>
+            <b><i>Creating a new Sequential Model:</i></b> Next a function was defined to create a new sequential model. This function was intended to return a compiled model with the optimizer function Adam and used the hyperparameters we defined inorder to hypertune the model. Next we instantiated the the tuner to perform hyper tuning using the Hyperband tuner with the objective to optimize the model. After that we ran the tuner to search for the best hyper parameters for our model.
+            <br><br/>
+            <b><i>Building and Training the Optimal Model:</i></b> Using the best hyperparameters obtained we created a neural network model. Trained it on our training dataset and then evaluated the model against the test data set.
+            
+            <h2>Results</h2>
+            <p id="nn_text">The best model that KerasTuner picked for the training and test data set was a sequentail model with three hidden layers with nine nodes in the first two hidden layers and seven nodes in the third with the activation function as 'tanh'.
+                When we fit and trained the data on this optimal model using 50 epochs. The accuracy achieved when the model was evaluated against the test data was 0.827 and the model loss recorded was 0.447. 
+            </p>
+
+            <center>
+                <img src="images/accuracy_plot.png" class="plot" alt="accuracy" style="width: 50%"></img>
+                <p><i>Figure 1: Accuracy recorded on the optimized model</i></p>
+                <br>
+                <br>
+                <img src="images/loss_plot.png" class="plot" alt="loss" style="width:50%"></img>
+                    
+                <p><i>Figure 2: Loss recorded on the optimized model</i></p>
+            </center> 
+            <br>
+            <p id="nn_text">The graphs above were plotted to have an idea of the accuracy and loss achieved over each epoch to determine if the optimal model as suggested by KerasTuner was under or over fit. 
+                As per the graphs suggest we can see the model was trained well, with the highest accuracy reaching about 0.95 and loss being minimized to 0.1. We can call it being over fit, however when we evaluated the model using the test data the accuracies achieved were round about 0.82 which indeed alligns with the other machine learning classifiers we have used.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- BODY ------------------------------------------------------------>
+
+    <!-- Import the Bootstrap JavaScript code -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+</body>
+</html>
