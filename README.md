@@ -14,7 +14,7 @@ Model | Test Accuracy
 Random Forests |83.4%
 Logistic Regression | 81.9%
 Suport Vector Machine | 80.8%
-Neural Network | xxx
+Neural Network | 82.7%
 
 </div>
 
