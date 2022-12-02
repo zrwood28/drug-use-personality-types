@@ -71,7 +71,7 @@
             <h2>Finding an Optimal Neural Network Model using Keras-Tuner</h2>
             <p id="nn_text"><b><i>Preprocessing Data:</i></b> First all the categorial data from the data set was transformed to numerical data using the pandas get dummies function. Then the data was split into training and testing set. Then using the standard scaler data training and testing datasets were scaled.
             <br><br/>
-            <b><i>Creating a new Sequential Model:</i></b>Next a function was defined to create a new sequential model. This function is intended to retuen a compiled model with optimizer function as Adam and uses the hyperparameters we defined inorder to hypertune the model. Next we instantiated the the tuner to perform hyper tuning using the Hyperband tuner with the objective to optimize the model. After that we ran the tuner to search for the best hyper parameters for the model.
+            <b><i>Creating a new Sequential Model:</i></b> Next a function was defined to create a new sequential model. This function was intended to return a compiled model with the optimizer function Adam and used the hyperparameters we defined inorder to hypertune the model. Next we instantiated the the tuner to perform hyper tuning using the Hyperband tuner with the objective to optimize the model. After that we ran the tuner to search for the best hyper parameters for our model.
             <br><br/>
             <b><i>Building and Training the Optimal Model:</i></b> Using the best hyperparameters obtained we created a neural network model. Trained it on our training dataset and then evaluated the model against the test data set.
             
@@ -81,11 +81,11 @@
             </p>
 
             <center>
-                <img src="images/accuracy_plot.jpg" class="plot" alt="accuracy" style="width: 50%"></img>
+                <img src="images/accuracy_plot.png" class="plot" alt="accuracy" style="width: 50%"></img>
                 <p><i>Figure 1: Accuracy recorded on the optimized model</i></p>
                 <br>
                 <br>
-                <img src="images/loss_plot.jpg" class="plot" alt="loss" style="width:50%"></img>
+                <img src="images/loss_plot.png" class="plot" alt="loss" style="width:50%"></img>
                     
                 <p><i>Figure 2: Loss recorded on the optimized model</i></p>
             </center> 
