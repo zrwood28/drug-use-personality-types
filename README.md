@@ -44,4 +44,6 @@ _____________
 - team.html
 - style.css
 
-
+## Instructions For Use:
+- All ML models are available in the Models folder.
+- To view model data, open and run jupyter notebooks.
