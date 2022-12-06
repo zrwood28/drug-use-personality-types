@@ -58,7 +58,7 @@
           <p class="center">Source: https://en.wikipedia.org/wiki/Random_forest#/media/File:Random_forest_diagram_complete.png</p>
           <br>
           <h2>Results</h2>
-          <p>The Random Forests models were generated with the Ptyhon library scikit-learn from the ensemble method.
+          <p>The Random Forests models were generated with the Python library scikit-learn from the ensemble method.
             Initially the model was outputting a 1.0 training score which indicated that the model was being overfitted. 
             In order to avoid this issue, the max_depth parameter of the model was modified to create a better result.
             The max_depth parameter essentially tells the model how in depth it should go to find the answer it is looking for. 
@@ -80,23 +80,20 @@
             <img class="img2" src="images/random_forest_feature_importance.png">
             <h4>Remove Ethnicity Attribute</h4>
             <p>With the ethnicity attribute removed, the model was ran again. The max_depth parameter was modified again to achieve an optimal testing score, 
-              and resulted in choosing a max_depth of 11. This generated a slightly lower traning score at 96.0% and nearly identical test score at 83.2% . Below are the results:</p>
+              and resulted in choosing a max_depth of 11. This generated a slightly lower training score at 96.0% and nearly identical test score at 83.2% . Below are the results:</p>
             <br>
             <p>Training Data Score: 96.0%</p>
             <p>Testing Data Score: 83.2%</p>
             <br>
             <h4>Remove Ethnicity and Country Attribute</h4>
             <p>With the Country-UK attribute being the most important feature, we removed it from the dataset out of curiousity. This model removed ethnicity and country, and a max_depth of 6 was utilized to achieve an optimal testing score. 
-               The generated a lower scores again with a traning score at 83.5% and test score at 80.8% . Below are the results:</p>
+               The generated a lower scores again with a training score at 83.5% and test score at 80.8% . Below are the results:</p>
               <br>
               <p>Training Data Score: 83.5%</p>
               <p>Testing Data Score: 80.8%</p>
         </div>
       </div>
     </div>
-
-
-
     <!-- BODY ------------------------------------------------------------>
 
     <!-- Import the Bootstrap JavaScript code -->
